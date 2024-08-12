@@ -44,5 +44,28 @@ function sumarArray(Array)
 return suma;
 }
 console.log(sumarArray(miArray));
+//----------------------------------------------------------------------------------------------------------//
+//Objetos literales y constructores
+//7. Crear un objeto literal `persona` con las propiedades `nombre`, `edad` y `profesion`.
+const persona ={
+        nombre: "Constanza",
+       edad: 18,
+       profesion:"Designer UX/UI"
+
+};
+console.log(persona);
+
+/*8. Crear un constructor `Producto` que tome parámetros `nombre`, `precio` y `stock`, y cree un
+objeto con esas propiedades.*/
+function Producto(nombre,precio,stock){
+this.nombre = nombre;
+this.precio = precio;
+this.stock = stock; 
+}
+let producto = new Producto("coty",1000000,1);
+console.log("producto");
+console.log(producto);
+/*9. Crear un objeto `pelicula` utilizando el constructor `Pelicula` con propiedades como `titulo`,
+`director` y `anio`.*/
 
 
