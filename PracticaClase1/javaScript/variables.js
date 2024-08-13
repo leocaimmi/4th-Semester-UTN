@@ -67,5 +67,31 @@ console.log("producto");
 console.log(producto);
 /*9. Crear un objeto `pelicula` utilizando el constructor `Pelicula` con propiedades como `titulo`,
 `director` y `anio`.*/
+//----------------------------------------------------------------------------------------------------------//
+//Arrays
+//10. Crear un array `frutas` con varios nombres de frutas. Imprimir el tercer elemento del array.
+let frutas = ["Pera","Manzana","Kiwi","Melocoton","Sandia"];
+console.log(frutas[2]);
+//11. Agregar una fruta más al final del array `frutas`. Imprimir el array actualizado.
+frutas.push("Naranja");
+console.log(frutas);
+/*12. Crear una función `filtrarPares` que tome un array de números como parámetro y retorne
+un nuevo array solo con los números pares.*/
+function filtrarPares(array)
+{
+    let arrayPares = [];
+    for(let i = 0;i<array.length;i++)
+    {
+        if(array[i]%2==0)
+        {
+            arrayPares.push(array[i]);
+        }
+    }
+
+    return arrayPares;
+}
+let arrayNumeros = [1,2,3,4,5,6,7,8,9];
+console.log(filtrarPares(arrayNumeros))
+
 
 
