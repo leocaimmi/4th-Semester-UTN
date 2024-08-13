@@ -92,6 +92,28 @@ function filtrarPares(array)
 }
 let arrayNumeros = [1,2,3,4,5,6,7,8,9];
 console.log(filtrarPares(arrayNumeros))
+//----------------------------------------------------------------------------------------------------------//
+//Funciones y Objetos combinados
+//13. Crear una función `crearPersona` que tome parámetros `nombre` y `edad`, y retorne un objeto persona con esas propiedades.
+
+function crearPersona(nombre,edad)
+{
+    return { nombre, edad };
+}
+let personita = crearPersona("Leo",20);
+console.log(personita);
+console.log(crearPersona("Constanza",18));
+//14. Crear una función `obtenerInfo` que tome un objeto persona como parámetro y retorne una cadena con su información.
+function obtenerInfo(persona)
+{
+    let cadena = "El nombre de la persona es["+persona.nombre+"] y su edad es ["+persona.edad+"]";
+return cadena;
+}
+console.log(obtenerInfo(personita));
+//----------------------------------------------------------------------------------------------------------//
+
+
+
 
 
 
