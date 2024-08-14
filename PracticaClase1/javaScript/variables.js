@@ -172,6 +172,62 @@ console.log(cadenaDias);
 console.log(filtrarPorNumero(cadenaDias,6));
 
 //----------------------------------------------------------------------------------------------------------//
+//Objetos y Arrays de Objetos
+//18. Crear un array de objetos `estudiantes`, donde cada objeto tenga propiedades como `nombre`, `edad` y `promedio`.
+const estudiantes = 
+[
+{
+    nombre:"Leo",
+    edad: 20,
+    promedio: 10
+},
+{
+    nombre: "Constanza",
+    edad: 18,
+    promedio: 10
+},
+{
+    nombre: "Carlos",
+    edad: 18,
+    promedio: 6
+}
+]
+    console.log(estudiantes);
+       
+//19. Crear una función `buscarEstudiante` que tome un array de estudiantes y un nombre, y retorne el objeto del estudiante con ese nombre.
+function buscarEstudiante(arrayEstudiantes,nombre)
+{
+let estudiante = null;
+for(let i = 0;i<arrayEstudiantes.length;i++)
+{
+    if(arrayEstudiantes[i].nombre === nombre)
+        {
+            console.log(arrayEstudiantes[i]);
+
+            estudiante = arrayEstudiantes[i];
+        } 
+}
+return estudiante;
+}
+console.log(buscarEstudiante(estudiantes,"Constanza"));
+//20. Crear una función `promedioClase` que tome el array de estudiantes y retorne el promedio de sus promedios.
+function promedioClase(arrayEstudiantes)
+{
+    let promedio = 0;
+    let suma = 0;
+    for(let i = 0;i<arrayEstudiantes.length;i++)
+    {
+        
+           suma +=arrayEstudiantes[i].promedio;
+   
+    }
+    promedio = suma/arrayEstudiantes.length;
+        return promedio;
+}
+console.log(promedioClase(estudiantes));
+
+
+//----------------------------------------------------------------------------------------------------------//
 
 
 
