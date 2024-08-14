@@ -67,6 +67,14 @@ console.log("producto");
 console.log(producto);
 /*9. Crear un objeto `pelicula` utilizando el constructor `Pelicula` con propiedades como `titulo`,
 `director` y `anio`.*/
+function Pelicula(titulo,director,anio)
+{
+    this.titulo =titulo;
+    this.director = director;
+    this.anio = anio;
+}
+const pelicula = new Pelicula("Interestellar","Christopher Nolan",2014);
+console.log(pelicula);
 //----------------------------------------------------------------------------------------------------------//
 //Arrays
 //10. Crear un array `frutas` con varios nombres de frutas. Imprimir el tercer elemento del array.
