@@ -119,7 +119,25 @@ return cadena;
 }
 console.log(obtenerInfo(personita));
 //----------------------------------------------------------------------------------------------------------//
-
+//Más sobre Arrays y Funciones
+//15. Crear una función `duplicarArray` que tome un array de números como parámetro y retorne un nuevo array con cada elemento duplicado.
+function duplicarArray(array)
+{
+    const arrayDuplicado = [];
+    let temp = 0;
+    for(let i = 0;i<array.length;i++)
+    {
+        temp = array[i];
+        arrayDuplicado.push(temp*2);
+    }
+    
+    return arrayDuplicado;
+}
+const array = [1,2,3,4];
+console.log(array)
+console.log(duplicarArray(array));
+//16. Crear una función `invertirCadena` que tome una cadena como parámetro y retorne la cadena invertida.
+//17. Crear una función `filtrarPorLongitud` que tome un array de palabras y un número como parámetro, y retorne un nuevo array con las palabras que tienen una longitud mayor al número.
 
 
 
