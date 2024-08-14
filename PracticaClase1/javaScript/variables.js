@@ -137,9 +137,41 @@ const array = [1,2,3,4];
 console.log(array)
 console.log(duplicarArray(array));
 //16. Crear una función `invertirCadena` que tome una cadena como parámetro y retorne la cadena invertida.
+function invertirCadena(array)
+{
+    let arrayInvertido =[];
+    let i = array.length-1;
+    while(i>=0)
+    {
+        arrayInvertido.push(array[i]);
+        i--;
+    }
+
+return arrayInvertido;
+}
+const arrayParaInvertir = ["c","o","t","y"];
+console.log(arrayParaInvertir);
+console.log(invertirCadena(arrayParaInvertir));
 //17. Crear una función `filtrarPorLongitud` que tome un array de palabras y un número como parámetro, y retorne un nuevo array con las palabras que tienen una longitud mayor al número.
 
+function filtrarPorNumero(array,numero)
+{
 
+let arrayConLongitud = [];    
+for(let i = 0;i<array.length;i++)
+{
+    if(array[i].length>numero)
+    {
+        arrayConLongitud.push(array[i]);
+    }
+}
+return arrayConLongitud;
+}
+let cadenaDias = ["lunes","martes","miercoles","jueves","viernes","sabado","domingo"];
+console.log(cadenaDias);
+console.log(filtrarPorNumero(cadenaDias,6));
+
+//----------------------------------------------------------------------------------------------------------//
 
 
 
