@@ -225,9 +225,49 @@ function promedioClase(arrayEstudiantes)
         return promedio;
 }
 console.log(promedioClase(estudiantes));
-
-
 //----------------------------------------------------------------------------------------------------------//
-
-
-
+//Uso avanzado de Objetos y Funciones
+//21. Crear un objeto `coche` con propiedades como `marca`, `modelo` y `anio`, y métodos como `arrancar` y `detener`.
+const coche = {
+    marca: "fiat",
+    modelo: "147",
+    anio: 2005,
+    arrancar:()=>{
+        return "Encendido";
+    },
+    detener:()=>{
+        return "Detenido";
+    }
+}
+console.log(coche);
+console.log(coche.arrancar);
+console.log(coche.detener);
+//22. Crear un constructor `Persona` con propiedades `nombre` y `edad`, y un método `saludar` que imprima un saludo personalizado.
+function Persona (nombre,edad)
+{
+this.nombre = nombre;
+this.edad = edad;
+this.saludar = function()
+{
+return "Hola joven",nombre,"que la fuerza te acompañe!!!";
+}
+}
+const persona1 = new Persona("coty",18);
+console.log(persona1);
+console.log(persona1.saludar);
+//23. Crear un método `agregarProducto` a la función constructora `Carrito` que agregue un producto al carrito.
+function Carrito()
+{
+    this.carrito = [];
+    this.agregarProducto = function(producto)
+    {
+        this.carrito.push(producto);
+    }
+    
+}
+let carritoCompras = new Carrito();
+carritoCompras.agregarProducto("papa");
+carritoCompras.agregarProducto("Manteca");
+carritoCompras.agregarProducto("Manzana");
+carritoCompras.agregarProducto("Hamburguesas");
+console.log(carritoCompras);
