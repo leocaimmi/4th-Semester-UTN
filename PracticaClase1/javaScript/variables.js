@@ -240,10 +240,10 @@ function Carrito() {
 
 }
 let carritoCompras = new Carrito();
-carritoCompras.agregarProducto(new Producto("papa",10,3));
-carritoCompras.agregarProducto(new Producto("hamburguesas",100,5));
-carritoCompras.agregarProducto(new Producto("manzana",16,6));
-carritoCompras.agregarProducto(new Producto("papel",100,7));
+carritoCompras.agregarProducto(new Producto("papa", 10, 3));
+carritoCompras.agregarProducto(new Producto("hamburguesas", 100, 5));
+carritoCompras.agregarProducto(new Producto("manzana", 16, 6));
+carritoCompras.agregarProducto(new Producto("papel", 100, 7));
 console.log(carritoCompras);
 //----------------------------------------------------------------------------------------------------------//
 //Manipulación de Arrays y Objetos
@@ -252,97 +252,83 @@ function compararNumeros(a, b) {//me sirve para poder utilizar el sort
     return a - b;
 }
 function ordenarNumeros(arrayDesordenado) {
-   let arrayOrdenado = arrayDesordenado.sort(compararNumeros);
+    let arrayOrdenado = arrayDesordenado.sort(compararNumeros);
     return arrayOrdenado;
 }
-console.log(ordenarNumeros([20,1,45]));
+console.log(ordenarNumeros([20, 1, 45]));
 //25. Crear una función `eliminarEstudiante` que tome un array de estudiantes y un nombre, y retorne un nuevo array sin el estudiante con ese nombre.
 
-function eliminarEstudiante(arrayEstudiantes,nombre)
-{
+function eliminarEstudiante(arrayEstudiantes, nombre) {
     let nuevoArray = [];
 
-   for(let i = 0;i<arrayEstudiantes.length;i++)
-   {
-       if(arrayEstudiantes[i].nombre !== nombre)
-       {
-         nuevoArray.push(arrayEstudiantes[i]);
-       }
-   }
+    for (let i = 0; i < arrayEstudiantes.length; i++) {
+        if (arrayEstudiantes[i].nombre !== nombre) {
+            nuevoArray.push(arrayEstudiantes[i]);
+        }
+    }
     return nuevoArray;
 }
 console.log(estudiantes);
-console.log(eliminarEstudiante(estudiantes,"Carlos"));
+console.log(eliminarEstudiante(estudiantes, "Carlos"));
 
 //26. Crear una función `totalCarrito` que tome un array de productos y retorne el precio total de los productos.
 function totalCarrito(carritoArray)//es el array de productos
 {
-let totalCompra = 0;
+    let totalCompra = 0;
 
-for(let i = 0;i<carritoArray.carrito.length;i++)
-{
-    totalCompra += carritoArray.carrito[i].precio;
-}
+    for (let i = 0; i < carritoArray.carrito.length; i++) {
+        totalCompra += carritoArray.carrito[i].precio;
+    }
 
-return totalCompra;
+    return totalCompra;
 }
 console.log(carritoCompras);
-console.log("El precio total de la compra $",totalCarrito(carritoCompras));
+console.log("El precio total de la compra $", totalCarrito(carritoCompras));
 //----------------------------------------------------------------------------------------------------------//
 //Uso avanzado de Funciones y Objetos
 //27. Crear una función `crearCalculadora` que retorne un objeto con métodos `sumar`, `restar`, `multiplicar` y `dividir`.
-function crearCalculadora()
-{
-   
-    return{
-        sumar:function(num1,num2)
-    {
-       return  num1+num2;
-    },
-    restar:function(num1,num2){
-        return num1-num2;
-    },
-    multiplicar:function(num1,num2)
-    {
-        return num1*num2;
-    },
-    dividir:function(num1,num2){
-       if(num2 ==0)
-       {
-        return "No se puede dividir por 0";
-       }
-        return num1/num2;
-    }
+function crearCalculadora() {
+
+    return {
+        sumar: function (num1, num2) {
+            return num1 + num2;
+        },
+        restar: function (num1, num2) {
+            return num1 - num2;
+        },
+        multiplicar: function (num1, num2) {
+            return num1 * num2;
+        },
+        dividir: function (num1, num2) {
+            if (num2 == 0) {
+                return "No se puede dividir por 0";
+            }
+            return num1 / num2;
+        }
     };
 }
 let calculadora = crearCalculadora();
-console.log(calculadora.sumar(1,2));
-console.log(calculadora.restar(1,2));
-console.log(calculadora.multiplicar(1,2));
-console.log(calculadora.dividir(1,2));
+console.log(calculadora.sumar(1, 2));
+console.log(calculadora.restar(1, 2));
+console.log(calculadora.multiplicar(1, 2));
+console.log(calculadora.dividir(1, 2));
 //28. Crear una función `crearCuentaBancaria` que retorne un objeto con métodos `depositar`, `retirar` y `saldo`.
-function crearCuentaBancaria()
-{
-    let saldo =0;
-    let cuenta ={
-        
-        depositar: function(monto)
-        {
-            saldo+=monto
+function crearCuentaBancaria() {
+    let saldo = 0;
+    let cuenta = {
+
+        depositar: function (monto) {
+            saldo += monto
             return monto
         },
-        retirar: function(monto)
-        {
-            if(saldo>0)
-            {
-                if(saldo-monto>=0)
-                {
-                    return saldo -=monto;
+        retirar: function (monto) {
+            if (saldo > 0) {
+                if (saldo - monto >= 0) {
+                    return saldo -= monto;
                 }
             }
         },
-        saldo: function()
-        {
+        saldo: function () {
             return saldo;
         }
     }
@@ -355,18 +341,82 @@ console.log(cuentaBancaria.depositar(1000));
 console.log(cuentaBancaria.saldo());
 console.log(cuentaBancaria.retirar(500));
 //29. Crear un constructor `Libro` con propiedades `titulo`, `autor` y `paginas`, y un método `detalles` que imprima la información del libro.
-function Libro(titulo,autor,paginas)
-{
-this.titulo = titulo;
-this.autor = autor;
-this.paginas = paginas;
-this.detalles = function()
-{
-    let detalle = "Titulo: "+titulo+"| Autor: "+autor+"| Cantidad de paginas: "+paginas;
-    return detalle;
-}
+function Libro(titulo, autor, paginas) {
+    this.titulo = titulo;
+    this.autor = autor;
+    this.paginas = paginas;
+    this.detalles = function () {
+        let detalle = "Titulo: " + titulo + "| Autor: " + autor + "| Cantidad de paginas: " + paginas;
+        return detalle;
+    }
 
 }
-let libro = new Libro("Constanza","Constanza",1000);
+let libro = new Libro("Constanza", "Constanza", 1000);
 console.log(libro.detalles());
 //----------------------------------------------------------------------------------------------------------//
+//Proyecto Final: Manejo de Datos
+//30. Crear un programa que simule una lista de tareas (`to-do list`) utilizando objetos y arrays. Debe permitir agregar tareas, marcar tareas como completadas y listar las tareas pendientes.
+function Tarea(descripcionTarea) {
+
+    this.descripcionTarea = descripcionTarea;
+    this.realizada = false;
+}
+
+
+function to_do_List() {
+   
+   let tareas = [];//aca se van a acumular las tareas
+    let tarea ={
+         agregarTarea: function(tareaNueva) {
+            tareas.push(tareaNueva);
+            return "Tarea agregada";
+        },
+         marcarTareaLista:function(nombreTarea) {
+            for (let i = 0; i < tareas.length; i++) {
+                if (nombreTarea.descripcionTarea ===tareas[i].descripcionTarea) {
+                    console.log(nombreTarea.descripcionTarea);
+                    tareas[i].realizada = true;
+
+                }
+            }
+            return "Tarea realizada";
+        },
+         listarTareasPendientes:function()
+        {
+            let tareasPendientes = [];
+            for(let i = 0;i<tareas.length;i++)
+            {
+                if(!tareas[i].realizada){
+                    tareasPendientes.push(tareas[i]);
+                }
+            }
+            return tareasPendientes;
+        }
+    }
+
+
+    return tarea;
+}
+
+let listaTareas = to_do_List();
+console.log(listaTareas.agregarTarea(new Tarea("manejar")));
+console.log(listaTareas.agregarTarea(new Tarea("viaje a USA")));
+console.log(listaTareas.agregarTarea(new Tarea("ver el atardecer a las 5:30 tomando mates")));
+console.log(listaTareas.listarTareasPendientes());
+console.log(listaTareas.marcarTareaLista(new Tarea("manejar")));
+console.log(listaTareas.listarTareasPendientes());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
