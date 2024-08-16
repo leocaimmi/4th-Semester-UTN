@@ -288,3 +288,37 @@ return totalCompra;
 }
 console.log(carritoCompras);
 console.log("El precio total de la compra $",totalCarrito(carritoCompras));
+//Uso avanzado de Funciones y Objetos
+//27. Crear una función `crearCalculadora` que retorne un objeto con métodos `sumar`, `restar`, `multiplicar` y `dividir`.
+function crearCalculadora()
+{
+   
+    return{
+        sumar:function(num1,num2)
+    {
+       return  num1+num2;
+    },
+    restar:function(num1,num2){
+        return num1-num2;
+    },
+    multiplicar:function(num1,num2)
+    {
+        return num1*num2;
+    },
+    dividir:function(num1,num2){
+       if(num2 ==0)
+       {
+        return "No se puede dividir por 0";
+       }
+        return num1/num2;
+    }
+    };
+}
+let calculadora = crearCalculadora();
+console.log(calculadora.sumar(1,2));
+console.log(calculadora.restar(1,2));
+console.log(calculadora.multiplicar(1,2));
+console.log(calculadora.dividir(1,2));
+//28. Crear una función `crearCuentaBancaria` que retorne un objeto con métodos `depositar`, `retirar` y `saldo`.
+
+//29. Crear un constructor `Libro` con propiedades `titulo`, `autor` y `paginas`, y un método `detalles` que imprima la información del libro.
