@@ -320,5 +320,37 @@ console.log(calculadora.restar(1,2));
 console.log(calculadora.multiplicar(1,2));
 console.log(calculadora.dividir(1,2));
 //28. Crear una función `crearCuentaBancaria` que retorne un objeto con métodos `depositar`, `retirar` y `saldo`.
+function crearCuentaBancaria()
+{
+    let saldo =0;
+    let cuenta ={
+        
+        depositar: function(monto)
+        {
+            saldo+=monto
+            return monto
+        },
+        retirar: function(monto)
+        {
+            if(saldo>0)
+            {
+                if(saldo-monto>=0)
+                {
+                    return saldo -=monto;
+                }
+            }
+        },
+        saldo: function()
+        {
+            return saldo;
+        }
+    }
 
+    return cuenta;
+}
+let cuentaBancaria = crearCuentaBancaria();
+console.log(cuentaBancaria.depositar(1000));
+console.log(cuentaBancaria.depositar(1000));
+console.log(cuentaBancaria.saldo());
+console.log(cuentaBancaria.retirar(500));
 //29. Crear un constructor `Libro` con propiedades `titulo`, `autor` y `paginas`, y un método `detalles` que imprima la información del libro.
