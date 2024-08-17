@@ -155,3 +155,77 @@ listaCompras.agregarProducto(new Producto("carne",7000,1));
 listaCompras.agregarProducto(new Producto("pan",2000,2));
 console.log(listaCompras);
 console.log("Total de la lista $"+listaCompras.verTotalLista());
+
+//11. Agenda de Contactos: Crea una agenda de contactos con nombres, números de teléfono y correos electrónicos.
+class Contacto
+{
+    constructor(nombre,numero,Email)
+    {
+    this.nombre = nombre;
+    this.numero = numero;
+    this.Email = Email;
+    }
+}
+
+class AgendaDeContactos
+{
+constructor()
+{
+    this.agendaContactos = [];
+}
+agendarContacto(contacto)
+{
+    this.agendaContactos.push(contacto);
+}
+eliminarContacto(contactoAborrar)
+{
+    return this.agendaContactos =this.agendaContactos.filter(elemento => elemento!==contactoAborrar);
+}
+
+}
+let agendaContactos = new AgendaDeContactos();
+let contacto = new Contacto("Carmen",2234873232,"Carmen@hotmail.com");
+agendaContactos.agendarContacto(new Contacto("Co",2234362432,"co@hotmail.com"));
+agendaContactos.agendarContacto(new Contacto("Leo",2234362123,"leo@hotmail.com"));
+agendaContactos.agendarContacto(new Contacto("Carlos",2235432432,"Carlos@hotmail.com"));
+agendaContactos.agendarContacto(contacto);
+console.log(agendaContactos);
+agendaContactos.eliminarContacto(contacto);
+console.log(agendaContactos);
+
+//12. Búsqueda de Palabras: Dado un párrafo y una palabra, cuenta cuántas veces aparece la palabra en el párrafo.
+function buscarCantidadPalabras(parrafo,palabraAContar)
+{
+
+   parrafo = parrafo.toLowerCase().split(/\W+/);
+    const cantidadPalabras = parrafo.filter(elemento=>elemento === palabraAContar).length;
+return cantidadPalabras;
+}
+
+const palabra = "ejemplo";
+const parrafo ="Hola que tal, por ejemplo,por ejemplo,por ejemplo,por ejemplo";
+const cantidadPalabra = buscarCantidadPalabras(parrafo,palabra);
+console.log(`La palabra "${palabra}" aparece "${cantidadPalabra}"`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
