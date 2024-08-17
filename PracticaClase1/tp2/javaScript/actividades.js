@@ -116,3 +116,42 @@ duplicados.*/
 let arrayCombinado = numeros.concat(arregloDuplicado);
 console.log(arrayCombinado);
 console.log(borrarDuplicados(arrayCombinado));
+
+//Arreglos con Tipos de Datos Compuestos:
+//10. Lista de Compras: Crea una lista de compras que incluya productos y sus cantidades.
+class Producto
+{
+constructor(nombre,precio,cantidad)
+{
+this.nombre = nombre;
+this.precio = precio;
+this.cantidad = cantidad;
+}
+
+}
+class ListaCompras
+{
+    constructor()
+    {
+        this.listaCompras = [];
+    }
+    agregarProducto(producto)
+    {
+    this.listaCompras.push(producto);
+    }
+    verTotalLista()
+    {
+        let suma = 0;
+        for(let e of this.listaCompras){
+            suma+=e.precio;
+        }
+        return suma;
+    }
+
+}
+let listaCompras = new ListaCompras();
+listaCompras.agregarProducto(new Producto("papa",1000,3));
+listaCompras.agregarProducto(new Producto("carne",7000,1));
+listaCompras.agregarProducto(new Producto("pan",2000,2));
+console.log(listaCompras);
+console.log("Total de la lista $"+listaCompras.verTotalLista());
