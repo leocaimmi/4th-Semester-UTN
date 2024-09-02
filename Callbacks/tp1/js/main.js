@@ -22,5 +22,17 @@ callback2(resultado);
 }
 
 sumarAsync(10,90,(suma)=>console.log(`la suma es ${suma}`));
-
+/*Escribe una función llamada `retrasarEjecucion` que acepte una función de callback y un
+número de milisegundos. La función debe llamar al callback después de la cantidad
+especificada de tiempo utilizando `setTimeout`.
+*/
+function retrasarEjecucion(callback,milisegundos)
+{
+    console.log("0 segundos");
+setTimeout(()=>{
+    callback();
+},milisegundos);
+}
+const milisegundos = 5000;
+retrasarEjecucion(()=>console.log(`Pasaron ${milisegundos/1000} segundos`),milisegundos);
 
