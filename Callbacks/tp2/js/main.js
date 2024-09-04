@@ -67,3 +67,36 @@ console.log(setSinDuplicado.has(4));
 /**10. Iterar sobre un Set:
 o Itera sobre el Set creado en el ejercicio 6 e imprime cada número. */
 setSinDuplicado.forEach((e)=>console.log(e));
+/*Ejercicios sobre Map
+11. Crear y manipular un Map:
+o Crea un Map con tres entradas: "nombre" -> "Juan", "edad" -> 30, "ciudad" ->
+"Madrid".
+o Añade una nueva entrada para "país" -> "España" y elimina la entrada
+"ciudad".
+ */
+
+const map = new Map();
+map.set("nombre","Juan");
+map.set("edad",30);
+map.set("ciudad","Madrid");
+console.log(map);
+map.delete("ciudad");
+console.log(map);
+map.set("pais","España");
+console.log(map);
+/*12. Acceder a valores en un Map:
+o Accede al valor de "nombre" en el Map creado y muéstralo. */
+console.log(map.get("nombre"));
+/*13. Iterar sobre un Map:
+o Itera sobre las entradas del Map e imprime cada par clave-valor. */
+map.forEach((e,k)=>console.log(k,"= "+e));
+/*14. Comprobar existencia en un Map:
+o Comprueba si el Map tiene la clave "edad" y muestra el resultado. */
+console.log(map.has("edad"));
+/*15. Convertir un Map a un Array:
+o Convierte el Map creado en el ejercicio 11 a un array de arrays */
+//const arrayMap = [...map];
+const arrayMap = Array.from(map);
+console.log(arrayMap);
+
+
