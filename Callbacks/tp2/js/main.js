@@ -95,8 +95,46 @@ o Comprueba si el Map tiene la clave "edad" y muestra el resultado. */
 console.log(map.has("edad"));
 /*15. Convertir un Map a un Array:
 o Convierte el Map creado en el ejercicio 11 a un array de arrays */
-//const arrayMap = [...map];
-const arrayMap = Array.from(map);
+const arrayMap = [...map];//spread operator
+//const arrayMap = Array.from(map);
 console.log(arrayMap);
+/*Ejercicios sobre Arrays y Métodos de Array
+16. Filtrar números mayores que 10:
+o Dado un array [5, 10, 15, 20, 25], usa filter para obtener los números mayores
+que 10.
+ */
+const arrayMayor = [5, 10, 15, 20, 25];
+console.log(arrayMayor.filter((e)=>e>10));
+/*17. Doblar los números en un array:
+o Usa map para crear un nuevo array donde cada número en el array [1, 2, 3, 4,
+5] se ha doblado. */
+const mapNuevo = new Map();
+for(let i = 1;i<6;i++)
+{
+    mapNuevo.set(i,i);
+}
+console.log(mapNuevo);
+const nuevoArray = [];mapNuevo.forEach((e)=>{nuevoArray.push(e*2)});
+console.log(nuevoArray);
+/*18. Convertir un array de nombres a mayúsculas:
+o Dado un array ["juan", "maria", "pedro"], usa map para convertir cada nombre
+a mayúsculas */
+const arrayNombres = ["juan", "maria", "pedro"];
+console.log(arrayNombres.map(e =>e.toUpperCase()));
+/*19. Filtrar palabras cortas:
+o Dado un array ["árbol", "casa", "elefante", "sol"], usa filter para obtener las
+palabras con menos de 5 letras.
+ */
+const arrayCosas = ["árbol", "casa", "elefante", "sol"];
+console.log(arrayCosas.filter((e)=>e.length<5));
+/*20. Sumar números pares en un array:
+o Dado un array [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], usa filter para obtener los números
+pares y luego utiliza reduce para sumarlos. */
+let array20 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(array20);
+array20 = array20.filter((e)=>e%2==0);
+console.log(array20);
+const suma =array20.reduce((acumulador,e)=>acumulador+e);//e de elemento
+console.log(suma);
 
 
