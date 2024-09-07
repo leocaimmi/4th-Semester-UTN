@@ -138,3 +138,67 @@ const suma =array20.reduce((acumulador,e)=>acumulador+e);//e de elemento
 console.log(suma);
 
 
+/**1.
+Transformar objetos usando map:
+o
+Dado un array de objetos [{ nombre: "Juan", edad: 20 }, { nombre: "María", edad: 25 }, { nombre: "Pedro", edad: 30 }], usa map para crear un nuevo array de strings que contenga solo los nombres. */
+
+const arrayObjetos = [{ nombre: "Juan", edad: 20 }, { nombre: "María", edad: 25 }, { nombre: "Pedro", edad: 30 }];
+
+arrayObjetos.forEach((e,i)=>{console.log(`Objeto[${i}] ${e.nombre}, ${e.edad}`)});
+const arrayString = arrayObjetos.map(e =>e.nombre);
+console.log(arrayString);
+
+/**2.
+Filtrar objetos en un array:
+o
+Dado un array de objetos [{ nombre: "Carlos", edad: 17 }, { nombre: "Ana", edad: 23 }, { nombre: "Luis", edad: 16 }], usa filter para obtener solo los objetos donde la persona sea mayor de edad (edad >= 18). */
+
+const arrayObjetos2 = [{ nombre: "Carlos", edad: 17 }, { nombre: "Ana", edad: 23 }, { nombre: "Luis", edad: 16 }];
+arrayObjetos2.forEach((e,i)=>{console.log(`Objeto[${i}] ${e.nombre}, ${e.edad}`)});
+console.log(arrayObjetos2.filter((e) => e.edad>=18));
+
+/**3.
+Contar elementos únicos en un array usando Map:
+o
+Dado un array de números [2, 3, 4, 2, 3, 5, 4, 5, 6], utiliza un Map para contar cuántas veces aparece cada número en el array. El resultado debe ser un Map donde las claves sean los números del array y los valores sean la cantidad de veces que cada número aparece. */
+const arrayNumeros = [2, 3, 4, 2, 3, 5, 4, 5, 6];
+let map2 = new Map();
+console.log(arrayNumeros);
+arrayNumeros.forEach((e)=>{
+if(map2.has(e))
+{
+    map2.set(e,map2.get(e)+1);//si exite lo obtengo y le sumo uno
+}
+else
+{
+    map2.set(e,1);//si no existe lo creo
+}
+});
+console.log(map2);
+/**4.
+Encadenamiento de métodos de array:
+o
+Dado un array de números [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], usa una combinación de filter, map, y reduce para obtener la suma de los cuadrados de los números pares. */
+let arrayNumeros2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(arrayNumeros2);
+arrayNumeros2 = arrayNumeros2.filter((e)=>e%2==0).map((e)=>e**2).reduce((acc,e)=>acc +e,0);
+console.log(arrayNumeros2);
+/**5.
+Transformar un objeto en un Map:
+o
+Dado un objeto { a: 1, b: 2, c: 3 }, transforma el objeto en un Map donde las claves son las propiedades del objeto y los valores son los valores correspondientes. */
+const objeto2 = { a: 1, b: 2, c: 3 };
+console.log(objeto2);
+let arrayAMap = Object.entries(objeto2);
+console.log(arrayAMap);
+let mapObjeto = new Map(arrayAMap);
+console.log(mapObjeto);
+/**6.
+Crear un objeto a partir de un Map:
+o
+Dado un Map que contiene [["nombre", "Pedro"], ["edad", 30], ["ciudad", "Sevilla"]], convierte este Map en un objeto. */
+const mapita = new Map([["nombre", "Pedro"], ["edad", 30], ["ciudad", "Sevilla"]]);
+console.log(mapita);
+const objeto3 = Object.fromEntries(mapita);
+console.log(objeto3);
