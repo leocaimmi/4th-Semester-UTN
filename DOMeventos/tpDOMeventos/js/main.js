@@ -20,3 +20,11 @@ mouse sobre él y lo restaure cuando se retire el mouse. */
 const miDivBoton = document.getElementById(`divBoton`);
 miDivBoton.addEventListener(`mouseenter`,()=>{miDivBoton.style.backgroundColor = "red"});
 miDivBoton.addEventListener(`mouseleave`,()=>{miDivBoton.style.backgroundColor = "white"});
+
+/**Ejercicio 6: Crea un formulario con un campo de texto y un botón. Al hacer clic en el botón, muestra el valor del campo de texto en un elemento `<p>`. */
+const textoAgregar = document.getElementById(`inputForm`);
+const botonForm = document.getElementById(`BotonForm`);
+botonForm.onclick = ()=>{
+   const resultado = document.getElementById(`resultado`);
+   resultado.textContent = textoAgregar.value;
+};
