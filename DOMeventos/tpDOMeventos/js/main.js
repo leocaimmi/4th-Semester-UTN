@@ -28,3 +28,43 @@ botonForm.onclick = ()=>{
    const resultado = document.getElementById(`resultado`);
    resultado.textContent = textoAgregar.value;
 };
+/**Ejercicio 7: Añade un evento que escuche cuando se presione una tecla en el documento y muestre el código de la tecla presionada en un elemento `<p>`. */
+const ejercicioSiete = document.getElementById('ejercicioSiete');
+document.addEventListener('keydown', (event) => {
+    ejercicioSiete.textContent = `Key: ${event.key}, Code: ${event.code}`;
+});
+/**Ejercicio 8: Crea una lista de elementos `<li>`. Al hacer clic en un elemento de la lista, cambia su color de fondo. */
+const lista = document.querySelectorAll(`#listaOcho li`);
+lista.forEach((e)=>{e.addEventListener('click', () => {
+   e.style.backgroundColor = 'lightblue'; // Cambia el color de fondo del elemento
+   
+});
+});
+/**Ejercicio 9: Implementa un contador que incremente en 1 cada vez que se haga clic en un botón. */
+const contadorAdd = document.getElementById(`contadorAdd`);
+contadorAdd.onclick = ()=>{
+   const parrafo = document.getElementById(`contador`);
+   let valor = parseInt(parrafo.textContent);
+   parrafo.textContent = valor+1;
+   
+};
+const contadorDelete= document.getElementById(`contadorDelete`);
+
+contadorDelete.onclick = ()=>{
+   const parrafo = document.getElementById(`contador`);
+   parrafo.textContent = 0;
+   
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
