@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    align-items: flex;
+    gap: 15px;
+}
+
+.galeria img {
+    width: 240px;
+    height: 240px;
+    cursor: pointer;
+    border: 2px solid #ccc;
+}
+
+.galeria img:hover {
+    border-color: #333;
+}
+
+#descripcion {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+#listaOcho li{
+ text-align: left;
+}

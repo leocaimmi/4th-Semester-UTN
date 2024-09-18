@@ -55,7 +55,17 @@ contadorDelete.onclick = ()=>{
    parrafo.textContent = 0;
    
 };
+/**Ejercicio 10: Crea una galería de imágenes. Al hacer clic en una imagen, muestra su descripción en un elemento `<p>`. */
 
+const imagenes = document.querySelectorAll(`.galeria img`);
+imagenes.forEach((img)=>{
+   img.addEventListener(`click`,function(){//recorre las imagenes cuando las clickeo
+   const descripción = this.getAttribute('data-description');//agarro el atributo DATA
+   console.log(descripción);
+   document.getElementById('descripcion').textContent = descripción;//pongo el txt
+   });
+});
+ 
 
 
 
