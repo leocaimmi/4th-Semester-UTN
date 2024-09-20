@@ -28,3 +28,19 @@ body {
 #listaOcho li{
  text-align: left;
 }
+#miSelect{
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+#reloj{
+     display: flex;
+     width: fit-content;
+     padding: 0.5rem;
+     color: rgb(20, 182, 20);
+     background-color: rgb(0, 0, 0);
+     justify-content: center;
+     margin: 0 auto;
+     border: .1rem solid black;
+     border-radius: .5rem;
+}

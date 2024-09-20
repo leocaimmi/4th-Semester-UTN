@@ -65,6 +65,74 @@ imagenes.forEach((img)=>{
    document.getElementById('descripcion').textContent = descripción;//pongo el txt
    });
 });
+/**Ejercicio 11: Agrega un botón que oculte o muestre un elemento `<div>` con el id "miDiv". */
+
+
+   const botonOcultar = document.getElementById(`ocultar`);
+   botonOcultar.addEventListener(`click`,()=>{
+      const miDivOcultar = document.getElementById(`miDivOcultar`);
+  
+   if (miDivOcultar.style.display === 'none') {
+      miDivOcultar.style.display = 'block';  // Mostrar el div
+      botonOcultar.textContent = "OCULTAR";
+  } else {
+      miDivOcultar.style.display = 'none';   // Ocultar el div
+      botonOcultar.textContent = "DESOCULTAR";
+  }
+      
+});
+/**Ejercicio 12: Crea un menú desplegable (select) con tres opciones. Al seleccionar una opción, muestra un mensaje con el valor seleccionado. */
+
+const select = document.getElementById(`miSelect`);
+select.addEventListener(`click`,()=>{
+const parrafo = document.getElementById(`opcionSelect`);
+//parrafo.textContent = opcionSelecionada.value;//agarro el value del select
+parrafo.style.color = "red";
+const indiceSeleccionado = select.selectedIndex;//selecciono el indice 
+const textoSeleccionado = select.options[indiceSeleccionado].text;//agarro el txt
+parrafo.textContent = `El texto seleccionado es: ${textoSeleccionado}`;
+
+});
+
+/**Ejercicio 13: Implementa un reloj digital que muestre la hora actual y se actualice cada segundo. */
+
+const relojDigital = document.getElementById('reloj');
+
+function actualizarReloj() {
+   const fecha = new Date();
+   const horas = agregarCero(fecha.getHours());
+   const minutos = agregarCero(fecha.getMinutes());
+   const segundos = agregarCero(fecha.getSeconds());
+   relojDigital.textContent = `${horas}:${minutos}:${segundos}`;
+}
+actualizarReloj();//funciona desde que arranca la pagina
+
+setInterval(actualizarReloj, 1000);//se actualiza cada segundo
+
+function agregarCero(num) {
+   return num.toString().padStart(2, '0');// tengan dos dígitos
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
 
 
