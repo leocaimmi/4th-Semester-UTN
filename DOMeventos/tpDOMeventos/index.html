@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/estilo.css">
     <title>TP-DOM</title>
 </head>
+
 <body>
     <p id="miParrafo">CONSTANZA</p>
     <div id="miDiv"></div>
@@ -15,12 +17,12 @@
         <li>Elemento 3</li>
     </ul>
     <div id="divBoton">
-        <label for="miInput" >Texto aqui</label>
+        <label for="miInput">Texto aqui</label>
         <input id="miInput" type="text" placeholder="ESCRIBA AQUI">
         <button id="miBoton">CLICK</button>
     </div>
     <hr>
-    <form id="miForm" >
+    <form id="miForm">
         <label for="inputForm">Text here</label>
         <input id="inputForm" type="text" placeholder="TEXT HERE">
         <button id="BotonForm" type="button">AÑADIR</button>
@@ -36,20 +38,21 @@
         <p id="contador">0</p>
         <button id="contadorAdd" type="button">AGREGAR</button>
         <button id="contadorDelete" type="button">RESETEAR</button>
-    </div>  
+    </div>
     <hr>
     <div class="galeria">
-        <img src="/recursos/26249a78777f6e3527d959ed4399dc1e.jpg" alt ="Perro 1" data-description ="Ovejero aleman precisoso">
-        <img src="/recursos/descarga (1).webp" alt ="Perro 2" data-description ="BUlldog frances precisoso">
-        <img src="/recursos/descarga.webp" alt ="Perro 3" data-description ="Guiño guiño">
-       
+        <img src="/recursos/26249a78777f6e3527d959ed4399dc1e.jpg" alt="Perro 1"
+            data-description="Ovejero aleman precisoso">
+        <img src="/recursos/descarga (1).webp" alt="Perro 2" data-description="BUlldog frances precisoso">
+        <img src="/recursos/descarga.webp" alt="Perro 3" data-description="Guiño guiño">
+
     </div>
     <p id="descripcion"></p>
     <hr>
     <div id="miDivOcultar">
         <p id="ocultarP">TEXTO</p>
         <label for="prueba">Escriba aqui</label>
-        <input id="prueba"type="text" placeholder="Escriba aqui">
+        <input id="prueba" type="text" placeholder="Escriba aqui">
     </div>
     <button id="ocultar" type="button">OCULTAR</button>
     <hr>
@@ -60,6 +63,59 @@
     </select>
     <p id="opcionSelect"></p>
     <div id="reloj"></div>
+    <hr>
+    <div id="tabla">
+        <table>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <div id="formulario">
+        <form>
+            <div class="formGrupo">
+                <label class="labelForm" for="texto">Email</label>
+                <input class="inputForm" id="texto" type="email" placeholder="Escriba aqui su email" required>
+            </div>
+            <div class="formGrupo">
+                <label class="labelForm" for="texto2">Contraseña</label>
+                <input class="inputForm" id="texto2" type="password" placeholder="Escriba aqui su contraseña" required>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <div id="calculadora">
+        <h2>Calculadora</h2>
+        <form id="calcForm">
+            <input type="number" id="num1" placeholder="numero 1" required>
+            <input type="number" id="num2" placeholder="numero 2" required>
+            <div>
+                <button type="button" id="sumar">SUMAR</button>
+                <button type="button" id="restar">RESTAR</button>
+                <button type="button" id="multiplicar">MULTIPLICAR</button>
+                <button type="button" id="dividir">DIVIDIR</button>
+            </div>
+            <p id="resultadoCalc"></p>
+        </form>
+    </div>
+    <div>
+        <h2>ADIVINA EL NUMERO</h2>
+        <div id="usuarioAdivinador">
+            <label for="adivinador">Numero para adivinar[1-100]</label>
+            <input id="adivinador" type="number" placeholder="Ingrese un numero para adivinar">
+            <button id="Consultar" type="button">Consultar</button>
+        </div>
+        <div>
+            <p id="parrafoAdivinar"></p>
+        </div>
+    </div>
     <script type="module" src="js/main.js"></script>
 </body>
+
 </html>
