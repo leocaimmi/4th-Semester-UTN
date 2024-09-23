@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>E-commerce</title>
+</head>
+<body>
+    
+    <div id="paso1">
+        <h1>Gestion de Carrito de Compras</h1>
+
+        <div id="botones">
+        <label for="textProducto">Nombre del producto</label>
+        <input id="textProducto" type="text"  placeholder="Ingrese el nombre aqui" required>
+
+        <label for="textCantidad">Cantidad del producto</label>
+        <input id="textCantidad" type="number"  placeholder="Ingrese la cantidad aqui" required>
+     
+        <label for="textPrecio">Precio del producto</label>
+        <input id="textPrecio" type="number"  placeholder="Ingrese el precio aqui" required>
+        <div id="botones">
+            <button id="botonProducto" type="button">Agregar Producto</button>
+            <button id="botonResetear" type="button">Vaciar Carrito</button>
+        </div>
+    </div>
+        <ul id="ProductoFinal"></ul>
+        <p id="totalCompra"></p>
+    </div>
+
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
