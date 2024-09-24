@@ -3,6 +3,22 @@
     {
       "id": "81d6",
       "nombre": "Tarea 1"
+    },
+    {
+      "id": "30e0",
+      "nombre": "Colgar la ropa"
+    },
+    {
+      "id": "2c1b",
+      "nombre": "das"
+    },
+    {
+      "id": "fe52",
+      "nombre": "Cocinar"
+    },
+    {
+      "id": "9a07",
+      "nombre": "Hacer la cena"
     }
   ],
   "clientes": []
