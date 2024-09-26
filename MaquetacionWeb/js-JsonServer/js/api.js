@@ -21,7 +21,8 @@ export async function getTareas() {
 export async function getTareaByID(id) {
 
     try {
-        const response = await fetch(`${urlBase}/${id}`);
+        const response = await fetch(`${urlBase}/${id}`,{
+            method: "GET"});
         if(!response.ok){
             throw new Error("HTTP request error "+ response.status);
         }
