@@ -1,4 +1,4 @@
-import { getTareas, postTarea } from "./api.js";
+import { deleteTarea, getTareas, postTarea } from "./api.js";
 import { Tarea } from "../tarea/Tarea.js";
 
 document.addEventListener(`DOMContentLoaded`,async()=>{//se ejecuta por ultimo
@@ -26,9 +26,23 @@ function crearFila(tarea){
     tdNombre.textContent = tarea.nombre;
     const tdId = document.createElement('td');
     tdId.textContent = tarea.id;
+    const tdEliminar = document.createElement('td');
+    tdEliminar.innerHTML = '<a href="" >Eliminar</a>'
+    tdEliminar.addEventListener('click',()=>{
+        try {
+            if(confirm('¿Desea confirmar la eliminacion?')){
+                deleteTarea(tarea.id);
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    });
+    const tdModificar = document.createElement('td');
+    tdModificar.innerHTML = `<a href= "modificar-tarea.html?idTarea=${tarea.id}">Modificar</a>`;
 
     const lista = document.getElementById('listaTareas');
-    tr.append(tdId,tdNombre);//agrega como hijos
+
+    tr.append(tdId,tdNombre,tdEliminar,tdModificar);//agrega como hijos
 
 lista.appendChild(tr);
     
