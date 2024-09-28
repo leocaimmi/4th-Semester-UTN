@@ -2,7 +2,7 @@
 cuando se resuelva. */
 
 
-const mostrarConDelay = () => {
+/*const mostrarConDelay = () => {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve("Me resolví");
@@ -19,7 +19,7 @@ const mostrarConDelay = () => {
     });
     /**Ejercicio 2: Crea una función que acepte un número y devuelva una Promise que se resuelva con el doble del número después de 1 segundo. */
 
-const duplicarNumeroPromise =(num) =>{
+/*const duplicarNumeroPromise =(num) =>{
     return new Promise((resolve,reject)=>{
        if(typeof num === "number")
        {
@@ -38,6 +38,52 @@ duplicarNumeroPromise(10)
     .catch((error)=>{
         console.log(error);
     });
+
+    /**Ejercicio 3: Crea dos Promises que se resuelvan después de 3 segundos cada una. 
+     * Combina ambas Promises para mostrar un mensaje cuando ambas se hayan resuelto. (Pista: usar Promise.all) */
+
+const sumarPromise = (num1,num2) =>{
+  return new Promise((resolve,reject) =>{
+    setTimeout(()=>{
+      const exito = true;
+      if(exito)
+      {
+        resolve(num1+num2);
+      }else{
+        reject("Se rompio todo");
+      }
+    },3000);
+  })
+};
+const restarPromise = (num1,num2) =>{
+  return new Promise((resolve,reject) =>{
+    setTimeout(()=>{
+      const exito = true;
+      if(exito)
+      {
+        resolve(num1-num2);
+      }else{
+        reject("Se rompio todo");
+      }
+    },3000);
+
+  })
+}
+Promise.all([sumarPromise(2,2),restarPromise(3,4)])
+  .then((resultado)=>{
+    
+    console.log(resultado[0]);
+    console.log(resultado[1]);
+
+  })
+  .catch((error)=>{
+    console.log(error);
+  })
+
+
+
+
+
 
 
 
