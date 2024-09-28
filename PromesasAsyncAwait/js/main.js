@@ -80,6 +80,56 @@ Promise.all([sumarPromise(2,2),restarPromise(3,4)])
     console.log(error);
   })
 
+/**Ejercicio 4: Crea una función que simule una solicitud HTTP asincrónica utilizando setTimeout y
+ *  devuelva una Promise que se resuelva con un objeto JSON después de 2 segundos. */
+
+function simulacionSolicitudHttp() {
+  return new Promise((resolve, reject) => {
+    // Simulamos una solicitud HTTP con setTimeout
+    setTimeout(() => {
+      // Creamos un objeto JSON para resolver la Promise
+      const datos = {
+        id: 1,
+        nombre: 'Producto de prueba',
+        precio: 100
+      };
+
+      // Resolvemos la Promise con los datos JSON
+      resolve(datos);
+    }, 2000); // Se espera 2 segundos antes de resolver la Promise
+  });
+}
+
+// Uso de la función simulando una solicitud HTTP
+simulacionSolicitudHttp()
+  .then((resultado) => {
+    console.log('Respuesta:', resultado);
+  })
+  .catch((error) => {
+    console.log('Error:', error);
+  });
+
+  /**Ejercicio 5: Crea una función que acepte un arreglo de números y
+   *  devuelva una Promise que se resuelva con la suma de los números después de 1 segundo. (Usar reduce) */
+
+
+  const probarArreglo = function(arreglo){
+    return new Promise((resolve,reject)=>{
+      setTimeout(()=>{
+          resolve(arreglo.reduce((acumulador,e)=>acumulador+e,0));
+      },1000)
+    });
+
+  }
+  probarArreglo([1,2,3,4])
+    .then((resultado)=>{
+      console.log(resultado);
+    })
+
+
+
+
+
 
 
 
