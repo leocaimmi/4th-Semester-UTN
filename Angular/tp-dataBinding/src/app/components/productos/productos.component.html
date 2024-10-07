@@ -1,0 +1,12 @@
+
+<h2>Lista de productos</h2>
+<ul>
+  <li *ngFor="let e of productos" [ngClass]="{dto: e.descuento}"><!--ng class es property binding-->
+    ID: {{e.id}} - Nombre: {{e.nombre}} - precio {{e.precio}} -<!--interpolación {{e.nombre}}...-->
+    <span *ngIf="e.descuento">!Tiene descuento¡</span>
+  </li>
+</ul>
+<h3>Agregar producto</h3>
+<input class="nombre" #nombre type="text" placeholder="Nombre del producto">
+<input class="precio" #precio type="number" placeholder="Precio del producto">
+<button (click)="agregarProducto(nombre.value, precio.value)">Agregar producto </button>
