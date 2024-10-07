@@ -23,5 +23,14 @@ agregarProducto(nombre: string,precio:string){
   }
   this.productos.push(nuevoProducto);
 }
+eliminarProducto(nombre: string){
+  const index = this.productos.findIndex(e => e.nombre.toLowerCase() === nombre.trim().toLocaleLowerCase());
+  if (index !== -1) {
+    this.productos.splice(index, 1);//si lo encuentro lo borro
+    console.log(`Producto "${nombre}" eliminado.`);
+  } else {
+    console.log(`Producto "${nombre}" no encontrado.`);
+  }
+}
 }
 

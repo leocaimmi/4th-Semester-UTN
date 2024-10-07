@@ -10,3 +10,6 @@
 <input class="nombre" #nombre type="text" placeholder="Nombre del producto">
 <input class="precio" #precio type="number" placeholder="Precio del producto">
 <button (click)="agregarProducto(nombre.value, precio.value)">Agregar producto </button>
+
+<input class="eliminar" #nombreEliminar type="text" placeholder="Nombre del producto a eliminar">
+<button (click)="eliminarProducto(nombreEliminar.value)">Eliminar producto </button>
