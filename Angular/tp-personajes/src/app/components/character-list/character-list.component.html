@@ -1,0 +1,9 @@
+<button (click)="agregarPersonaje()">Agregar Personaje</button>
+<div *ngFor="let personaje of personajes">
+  <app-character-card
+    [personsaje]="personaje"
+    (eliminarPersonaje)="eliminarPersonaje($event)"
+    (verDetalle)="verDetallePersonaje($event)">
+  </app-character-card>
+</div>
+

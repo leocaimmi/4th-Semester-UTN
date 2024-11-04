@@ -1,0 +1,15 @@
+<fieldset>
+<legend>{{textoLegend}}</legend>
+  <form [formGroup]="formularioPersonaje">
+    <label for="nombre">Nombre</label>
+    <input formControlName="name" id="nombre" placeholder="Nombre">
+    <label for="alias">Alias</label>
+    <input formControlName="alias" id="alias" placeholder="Alias">
+    <label for="poder">Poder</label>
+    <input formControlName="powers" id="poder" placeholder="Poder">
+    <label for="descripcion">Descripcion</label>
+    <input formControlName="description" id="descripcion" placeholder="Descripcion">
+
+    <button type="submit" (click)="onSubmit()">{{textoBoton}}</button>
+  </form>
+</fieldset>
